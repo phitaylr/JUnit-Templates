@@ -18,7 +18,7 @@
    
    @Test   //array input
    public void testArray() throws Exception{
-      assertTrue("getAvg(new int[] {1,2,3}) doesn't return 2", tester.getAvg(new int[] {1,2,3}) == 2);
+      assertTrue("getMax(new int[] {1,2,3}) doesn't return 3", tester.getAvg(new int[] {1,2,3}) == 3);
    }
 
    @Test   //check number of methods
