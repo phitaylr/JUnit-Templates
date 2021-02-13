@@ -18,7 +18,7 @@
    
    @Test   //array input
    public void testArray() throws Exception{
-      assertTrue("getMax(new int[] {1,2,3}) doesn't return 3", tester.getAvg(new int[] {1,2,3}) == 3);
+      assertTrue("getMax(new int[] {1,2,3}) doesn't return 3", tester.getMax(new int[] {1,2,3}) == 2);
    }
 
    @Test   //check number of methods
@@ -29,7 +29,7 @@
    
    //Run a void method and return output from stdout
    @Test
-   public static String testVoidMethod(String input){
+   public void testVoidMethod(String input){
          
        // set stdout
       ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -38,6 +38,7 @@
       
       //UPDATE THIS LINE
       tester.CHANGETOMETHODNAME(/* put arguments here */);
-      return baos.toString();
+      String output = baos.toString();
+      assertTrue("", output.contains("SEARCHTEXT")); 
    
    }
