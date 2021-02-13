@@ -26,3 +26,18 @@
       Method[] s = TEMPLATE.class.getDeclaredMethods();   
       assertTrue("Not enough methods found.", s.length > 2);
    }
+   
+   //Run a void method and return output from stdout
+   @Test
+   public static String testVoidMethod(String input){
+         
+       // set stdout
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      PrintStream ps = new PrintStream(baos);
+      System.setOut(ps);
+      
+      //UPDATE THIS LINE
+      tester.CHANGETOMETHODNAME(/* put arguments here */);
+      return baos.toString();
+   
+   }
